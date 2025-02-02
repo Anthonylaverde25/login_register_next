@@ -15,6 +15,7 @@ import {
 import { useAuthHandlers } from '@actions/auth.handlers'
 import { cn } from 'utils/utils'
 import NavUser from './NavUser'
+import { UserType } from 'app/types'
 
 const components = [
     {
@@ -160,7 +161,7 @@ export function NavigationMenuDemo() {
     )
 }
 
-export function Header() {
+export function Header(authProps: UserType) {
     const { onLogout } = useAuthHandlers()
     //mx-auto max-w-screen-xl
     return (
@@ -177,7 +178,7 @@ export function Header() {
                         >
                             Log out
                         </button>
-                        <NavUser />
+                        <NavUser {...authProps} />
                     </div>
                 </div>
             </nav>

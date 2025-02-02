@@ -8,6 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Toaster } from 'sonner'
 import { AuthProvider } from 'context/AuthContext'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Header } from '@/components/Header'
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
