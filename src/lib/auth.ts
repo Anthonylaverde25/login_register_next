@@ -1,13 +1,12 @@
-import axiosInstance from 'utils/axiosConfig'
-
 export const Paths = {
     HOME: '/',
     PROFILE: '/profile',
     LOGIN: '/login',
     REGISTER: '/register',
+    DASHBOARD: '/dashboard',
 } as const
 
-export const ProtectedRoutes = [Paths.HOME, Paths.PROFILE]
+export const ProtectedRoutes = [Paths.HOME, Paths.PROFILE, Paths.DASHBOARD]
 export const PublicRoutes = [Paths.LOGIN, Paths.REGISTER]
 
 export const verifyToken = async (token: string): Promise<boolean> => {
